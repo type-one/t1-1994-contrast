@@ -1,0 +1,42 @@
+        MIDAS Sound System makefiles
+        ----------------------------
+
+All MIDAS Sound System example programs are built using makefiles. They
+were used instead of Borland C project files to allow development also
+outside the Borland IDE, and for easier using with other compilers. If
+you are unfamiliar with make, you can practically always use "make
+-fFILENAME" to recompile a program, or "make -fFILENAME -B" to fully
+build it. Full built is required when changing from one makefile to
+another in the same directory, as some files may not be compiled with
+correct options. A full build of the program compiles all the files,
+whether they were changed or not.
+
+Most of the makefiles will require some editing, as the directories and
+compiler names might not be correct. Everything that needs to be
+changed is defined in the beginning of the makefile. For example, if
+the makefile contains a line
+        BCDIR = c:\bc
+and you have installed Borland C to d:\borlandc, simply change the line
+to
+        BCDIR = d:\borlandc
+with any text editor. Likewise, if you are using Borland Pascal instead
+of Turbo Pascal, change the line
+        PC = tpc
+to
+        PC = bpc
+and similarly for different C compilers.
+
+
+The makefiles and corresponding batch files in MIDAS Sound System are:
+
+MIDP.MAK                MIDAS Module Player
+DBP.MAK                 MIDAS debug module player
+MIDASLIB.MAK            MIDAS Sound System library, MIDAS.LIB.
+MAKELIB.BAT             Builds MIDAS.LIB, which is used by example
+                        programs.
+DBPPAS.MAK              MIDAS Pascal debug module player
+MIDASTPU.MAK            MIDAS Sound System interface unit, MIDAS.TPU
+MAKETPU.BAT             Builds MIDAS.TPU, which is used by example
+                        programs
+EXAMPLES\C_EXP.MAK      C-language examples. Needs MIDAS.LIB
+EXAMPLES\PAS_EXP.MAK    Pascal examples. Needs MIDAS.TPU

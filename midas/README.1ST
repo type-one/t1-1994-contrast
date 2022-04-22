@@ -1,0 +1,153 @@
+        MIDAS Sound System v0.32 revision C
+        -----------------------------------
+
+MIDAS Sound System is Copyright 1994 Petteri Kangaslampi and Jarno
+Paananen. It may only be used, modified and distributed under the terms
+of the MIDAS Sound System license, LICENSE.TXT.
+
+
+This is just a small bug fix release of MIDAS v0.32, to correct the
+hopefully final bug in SB 16 support. We did not plan to release this
+separately at all, as we are currently working on MIDAS Sound System
+v0.40, but as the release of v0.40 is delayed to the near future (two
+weeks?), we wanted to put this out in the hope that complaints about SB
+16 support would finally cease.
+
+What is now fixed is the 16-bit sound output. For some unknown reason
+the Sound Blaster interrupt is acknowledged in 16-bit modes by reading
+the port 2xFh, not 2xEh as in all other modes. Thanks must go to Otto
+Chrons for this one. Please note, however, that you MUST USE THE
+HIGH DMA CHANNEL FOR 16-BIT SOUND, and that MIDAS detects the SB to
+be in DMA 1. Therefore you MUST FORCE THE HIGH DMA CHANNEL NUMBER
+IF IT IS OTHER THAN 1 WITH THE COMMAND LINE OPTION "-d".
+
+So why is v0.40 delayed? The main reason is again school - we are very
+busy with our studies at the moment, and it looks like the workload is
+only getting heavier as time passes. We have our final examinations
+next spring, in May, so don't expect anything really fancy before that.
+
+The other reason for delaying of v0.40 is that it is going to have a
+lot of new features. Here are some highlights:
+        * Faster mixing routines
+        * Support for Multitracker modules
+        * Support for extended octaves (0-5) in Protracker modules
+        * Built-in setup with save/load configuration
+        * Rewritten, smaller command line parser (not needed anymore
+        because of the new setup)
+        * Ability to force sound card type (ie SB 1.0, Pro or 16) as
+        well as Sound Device type
+        * Only one Module Player is linked in anymore if only modules
+        of one type are played
+If all goes well, there will also be support for pure assembler
+programming (no C compiler or libraries needed) and Borland Pascal 7
+16-bit protected mode extender. Turbo Pascal 6 support will, however,
+be removed as it does not support ASCIIZ strings.
+
+So that should be out in a couple of weeks or so. Meanwhile, let us
+know if this works on your computer, especially if you have a SB 16
+sound card. MIDAS Module Player v0.43a should be released in one week
+or so, with support for MTM modules, working SB 16 support, sound
+amplification that can be adjusted on the fly etc...
+
+Now just in case someone only has this update packet, here is the
+standard stuff from the v0.32b readme file:
+
+...
+
+If you have any questions, comments or bugs reports, or just want to
+share some thoughts about programming in general, please contact us. We
+hope that you understand that supporting a free product is not always
+very motivating, especially under heavy pressure from outside world
+like school, and so without any feedback from you the MIDAS project
+will probably not have a long life. So, whether you like MIDAS or not,
+please let us know. And if you find MIDAS useful and use it in your
+programs, a souvenir postcard from your home city would be nice...
+
+We will be extremely grateful for any kind of support you can offer to
+help us in continuing to make these free public versions available. We
+would need support BBSes, a HQ BBS from the H{me are in Finland and
+having a "official" support FTP-site would be nice too. And of course
+we can use practically anything computer related: programming
+information, example code, software, hardware etc.
+
+Finally, a note to all sound card manufacturers and marketers: MIDAS
+does not support very many sound cards yet, but we will add support to
+practically any sound card, provided that we can get the programming
+information and a card for testing. So if you have a sound card that
+you would like us to support in its native mode, contact us.
+
+
+		Contacting information
+		----------------------
+
+
+e-mail: (preferred)
+        pekanga@freeport.uwasa.fi (Petteri Kangaslampi)
+        Jarno_Paananen@sonata.fipnet.fi (Jarno Paananen)
+        gurus2@freeport.uwasa.fi (Jarno Paananen, use if the fipnet
+                address fails)
+
+voice:
+        +358-31-3646764 (Petteri Kangaslampi)
+	+358-31-3422147 (Jarno Paananen)
+	Please restrict your calls to 10.00 - 21.30, Finnish time.
+
+normal mail:
+	Petteri Kangaslampi
+	Simeoninkuja 4
+	FIN-36240 Kangasala 4
+	Finland
+        Europe
+
+	Jarno Paananen
+	Puskalantie 6
+	FIN-37120 Nokia
+	Finland
+        Europe
+
+
+
+
+		Whom to contact?
+		----------------
+
+If you have a question about a particular subject, here is a list of
+which of us did what. Naturally you can contact either one of us - we
+will forward the messages as necessary.
+
+Petteri Kangaslampi:
+	* General questions about MIDAS
+	* MIDAS architecture, including error handling and memory
+	  allocation
+	* Pascal version
+	* Pro Audio Spectrum, Windows Sound System and Sound Blaster
+	  Sound Devices
+	* Mixing routines (DSM).
+
+Jarno Paananen:
+	* Gravis UltraSound Sound Device
+	* Protracker and Scream Tracker 3 module players
+
+
+
+
+                Distribution sites
+                ------------------
+
+The latest MIDAS Sound System and MIDAS Module Player should be always
+available on these fine BBSes:
+
+WarmBoot BBS            +55-194-265112
+        Sysop: Carlos Henrique Cantu (WarmBooter)
+
+Moir Brandts Honk       #1: +31-(0)70-3461215 USR/DS         (14K4)
+                        #2: +31-(0)70-3457929 ZyXEL U-1496E+ (19K2)
+                        #3: +31-(0)70-3452981 LineLink 144e  (14K4)
+        Sysop: Hugo Voerman
+
+The Pantheon            703-378-3553 (changing soon?)
+        Sysops: Farmicus [CiA], Lord Soth [iCE], and Shaggy [iCE Senior
+        Staff]
+
+The Solarium            +358-31-3170851
+        Sysop: Jussi H”ltt„ (Peak / Anarchy)

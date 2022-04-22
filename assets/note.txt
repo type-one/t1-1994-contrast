@@ -1,0 +1,20 @@
+Some assets I could find back on my old HDD drive backup.
+
+IFF and LBM extension are for Deluxe Paint II IFF file format (256 colors), a popular painting software 
+that existed on Amiga, MS-DOS PC and Atari ST.  In the 90s we were using the MS-DOS version.
+
+PCX is for Paint Brush file format and it was a popular format used on PC for 256 colors images.
+
+To convert the IFF and PCX pictures to raw data, we were using "alchemy" to convert pictures to raw.
+
+https://www.uselesssoftware.com/download/alch162-zip
+
+Recoil library allows to load these legacy picture formats that were popular in the 80s and early
+90s.
+
+https://sourceforge.net/projects/recoil/
+http://grafx2.chez.com/index.php?categorie2/history
+
+The last asset in the intro is an ANSI logo edited with a program called "TheDraw"
+
+https://winworldpc.com/product/the-draw/4x

@@ -1,0 +1,113 @@
+        MIDAS Sound System v0.32 Revision History
+	-----------------------------------------
+
+07-Aug-1994 (JP & PK)
+---------------------
+        MIDAS Sound System v0.32 released at ASSEMBLY '94 in
+        Helsinki, Finland.
+
+RAWFILE.*
+        New low-level file handling routines for better platform
+        independency.
+
+ASMRFILE.ASM
+        New low-level file routines written totally in
+        assembler. Can be used with 16-bit Pascal and C.
+
+FILE.*
+        New high-level file routines. All module loaders use
+        these instead of C library functions. This makes using
+        other methods for storing the data, such as compressed
+        file libraries, much easier.
+
+S3M.PAS
+MODP.PAS
+MODLOAD.C
+S3MLOAD.C
+        Scream Tracker 3 and Protracker module loaders no
+        longer use C library functions. Pascal loaders have been
+        removed, and now the Pascal version uses loaders written
+        in C.
+
+DSM.ASM
+GUS.ASM
+        SoundDevice.Pause() and SoundDevice.Mute() functions
+        have been implemented for all Sound Devices.
+
+DSM.ASM
+        Amiga Loop Emulation has been implemented for the DSM
+        too. This allows much more accurate playing of Pro
+        Tracker modules.
+
+S3M.ASM
+MOD.ASM
+MPLAYER.*
+        ModulePlayer.SetMasterVolume has been implemented. It
+        was included in the structure earlier, but "disappeared"
+        at some stage.
+
+MIDP.C
+        MIDP is now at version 0.42.
+        A timer has been added on the screen.
+        'T' now toggles the active channel on/off.
+        'P' pauses playing, and Space mutes.
+        DMP-compatible default panning has been added,
+        command-line option '-n'.
+        Also some other minor changes and bug fixes.
+
+
+*.*
+        Lots of other changes, like bug fixes.
+
+
+
+        Changes to revision B
+	---------------------
+
+
+14-Aug-1994 (PK)
+----------------
+VU.ASM
+	Fixed a bug in VU meters with some long looping samples.
+
+
+
+15-Aug-1994 (JP)
+----------------
+GUS.ASM
+	Fixed a bug in gusClearChans.  It didn't work unless gusPlay was
+	still called.
+	Also fixed strange clicking when muting surround channels.
+	Some other internal changes and optimizations.
+
+
+
+15-Aug-1994 (PK)
+----------------
+MIDAS.PAS
+        Fixed a tiny but fatal bug. asczBuffer was being
+        initialized to NULL but was never allocated - ASCIIZ
+        conversions went to address 0000:0000.
+
+
+
+16-Aug-1994 (PK)
+----------------
+*.*
+        MIDAS Sound System v0.32b released.
+
+
+02-Nov-1994 (PK)
+----------------
+SB.ASM
+        A small bug in SB 16 support fixed. In Sound Blaster 16
+        16-bit output modes, the interrupt is acknowledged by reading
+        port 2xFh, not 2xEh as in all other output modes. Thanks,
+        Otto!
+
+        MIDAS Sound System v0.32b released. A small bug fix in SB 16
+        16-bit output support. This version was not supposed to be
+        released at all, but as v0.40 is still delayed, we wanted to
+        release this small SB 16 fix. Note that this version is not,
+        unlike v0.40, tested under a SB 16, but the Sound Blaster
+        support code is practically identical.

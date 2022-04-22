@@ -1,0 +1,89 @@
+                 MIDAS Sound System LICENSE
+                 --------------------------
+    Copyright 1994 Petteri Kangaslampi and Jarno Paananen
+
+0. Throughout this license, "the original MIDAS Sound System archive"
+or "the original archive" refers to the set of files originally
+distributed by the authors (Petteri Kangaslampi and Jarno Paananen) as
+the MIDAS Sound System. This archive is originally named as
+"MDSSxxxy.ZIP", where x.xx is the version number, but it may have been
+renamed or re-archived by third parties.
+
+"You" refers to the licensee, or person using the MIDAS Sound System.
+"Using" the MIDAS Sound System includes compiling the MIDAS Sound
+System source code and linking it to other parts of MIDAS Sound System
+or your own code to form a "program". This program is referred to as "a
+program using the MIDAS Sound System".
+
+This license applies to all files distributed in the original MIDAS
+Sound System archive, including all source code, binaries and
+documentation, unless otherwise stated in the file in its original,
+unmodified form as distributed in the original archive. If you are
+unsure whether or not a particular file is covered by this license, you
+must contact us to verify this.
+
+MIDAS SOUND SYSTEM IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
+EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT
+WILL ANY OF THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY DAMAGES
+CAUSED BY THE USE OR INABILITY TO USE, OF MIDAS SOUND SYSTEM.
+
+As you have not signed this license, you are not required to accept it.
+However, as MIDAS Sound System is Copyright 1994 Petteri Kangaslampi
+and Jarno Paananen (the authors), only this license grants you the
+right to use, distribute and modify it.  Therefore, by using,
+distributing or modifying MIDAS Sound System, you indicate that you
+understand and accept all the terms of this license.
+
+
+1. MIDAS Sound System may freely be copied and distributed in its
+original, unmodified form as long as no fee is charged for the MIDAS
+Sound System itself. A fee, not exceeding 10USD, may be charged for the
+physical act of copying, as long as it is clearly stated, that the
+MIDAS Sound System itself is free and may always be distributed free of
+charge. When ever the MIDAS Sound System or portions of it are
+distributed, this license must be included in unmodified form, and all
+files must contain their original copyright notices. If only a portion
+of a file is being distributed, the appropriate copyright notice must
+be copied into it from the beginning of the file, and this license must
+still be included in unmodified form.
+
+
+2. The MIDAS Sound System files may freely be modified, and these
+modified files distributed under the terms of Section 1 above, provided
+that the following conditions are met:
+
+        2.1. All the modified files must carry their original
+             copyright notice, in addition to a list of modifications
+             made and their respective authors.
+
+        2.2. Modified versions files belonging under this
+             license still do so, no matter what kind of modifications
+             have been made.
+
+
+3. MIDAS Sound System may not be used in commercial programs, including
+shareware. No program using MIDAS Sound System may be sold for any
+price, and neither may any fee be charged for the right to use the
+program. Programs using MIDAS Sound System may always be freely
+distributed if no fee is charged for the distribution and may freely be
+used by anyone. The Program and its documentation must clearly state
+that the program uses MIDAS Sound System and that it may freely be used
+and distributed under the terms of this Section 3.
+
+
+4. MIDAS Sound System, or portions of it, may not be included as parts
+of a commercial software package, in source code, object module or any
+other form. Neither may MIDAS Sound System, or portions of it, be
+printed in a commercial publication, including, but not limited to,
+magazines and books. Any software package or publication including
+portions of MIDAS Sound System may freely be used and distributed, as
+stated in Section 3.
+
+MIDAS Sound System may, however, be included in free software packages
+as long as the whole software package can freely be distributed under
+the terms of section 3 and all conditions of this license are met.
+MIDAS Sound System, or portions of it, may also be printed for personal
+or educational usage, provided that no attempt is made to restrict the
+copying and usage of any parts of the printout or the publication in
+which portions of MIDAS are included.

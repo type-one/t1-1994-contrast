@@ -1,0 +1,32 @@
+        MIDAS simple programming interface
+        ----------------------------------
+
+MIDAS.C & MIDAS.H and MIDAS.PAS contain a simplified MIDAS Sound System
+programming interface, which allows easy integration of background
+music into programs. They are not directly suitable for other kinds of
+programs than stand-alone module players, but can serve as a basis for
+building a tailored interface for your own needs.
+
+The MIDAS programming interface also includes a command-line option and
+environment string parser. While this kind of configuration is not
+useful in most applications, they can serve as a quick setup system
+during development phase, until you have time to build a better
+configuration system for your own program. Again, the command-line
+option parser can be used as a convenient basis for a setup program.
+
+The MIDAS parser recognizes the following options:
+
+        -sx     Force Sound Device x (1 = GUS, 2 = PAS, 3 = WSS, 4 = SB,
+                5 = No Sound)
+        -pxxx   Force I/O port xxx (hex) for Sound Device
+        -ix     Force IRQ x for Sound Device
+        -dx     Force DMA channel x for Sound Device
+        -mxxxx  Set mixing rate to xxxx Hz
+        -oxxx   Force output mode (8 = 8-bit, 1 = 16-bit, s = stereo,
+                m = mono)
+        -e      Disable EMS usage
+        -t      Disable ProTracker BPM tempos
+        -u      Enable Surround sound
+        -v      Disable real VU-meters
+
+Also '\' is recognized as an option delimiter.

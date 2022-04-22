@@ -1,0 +1,184 @@
+	MIDAS Sound System function ID numbers
+	--------------------------------------
+
+100 dmaAllocBuffer
+101 dmaFreeBuffer
+102 dmaPlayBuffer
+103 dmaStop
+104 dmaGetPos
+
+200 dsmInit
+201 dsmClose
+202 dsmOpenChannels
+203 dsmCloseChannels
+204 dsmGetMixRate
+205 dsmGetMode
+206 dsmClearChannels
+207 dsmMute
+208 dsmPause
+209 dsmSetMasterVolume
+210 dsmPlaySound
+211 dsmStopSound
+212 dsmSetRate
+213 dsmGetRate
+214 dsmSetVolume
+215 dsmSetInstrument
+216 dsmSetPosition
+217 dsmGetPosition
+218 dsmSetPanning
+219 dsmGetPanning
+220 dsmMuteChannel
+221 dsmAddInstrument
+222 dsmRemInstrument
+223 dsmSetUpdRate
+224 dsmPlay
+225 dsmMixData
+
+300 emsInit
+301 emsClose
+302 emsAlloc
+303 emsFree
+304 emsMap
+305 emsSave
+306 emsRestore
+307 emsAllocPages
+308 emsFreePages
+309 emsSafe
+310 emsStopSafe
+
+400 memAlloc
+401 memFree
+
+500 modIdentify
+501 modInit
+502 modClose
+503 modLoadModule
+504 modFreeModule
+505 modPlayModule
+506 modStopModule
+507 modSetInterrupt
+508 modRemoveInterrupt
+509 modPlay
+510 modSetPosition
+511 modGetInformation
+512 modConvertSample
+513 modConvertTrack
+
+600 s3mIdentify
+601 s3mInit
+602 s3mClose
+603 s3mLoadModule
+604 s3mFreeModule
+605 s3mPlayModule
+606 s3mStopModule
+607 s3mSetInterrupt
+608 s3mRemoveInterrupt
+609 s3mPlay
+610 s3mSetPosition
+611 s3mGetInformation
+612 s3mDetectChannels
+613 s3mFindUsedInsts
+
+700 tmrGetScrSync
+701 tmrInit
+702 tmrClose
+703 tmrPlay
+704 tmrStop
+705 tmrSyncScr
+706 tmrStopScrSync
+707 tmrSetUpdRate
+
+800 vuInit
+801 vuClose
+802 vuPrepare
+803 vuRemove
+804 vuMeter
+
+900 rfOpen
+901 rfClose
+902 rfGetSize
+903 rfRead
+904 rfWrite
+905 rfSeek
+906 rfGetPosition
+
+1000 fileOpen
+1001 fileClose
+1002 fileGetSize
+1003 fileRead
+1004 fileWrite
+1005 fileSeek
+1006 fileGetPosition
+
+2000 gusDetect
+2001 gusInit
+2002 gusClose
+2003 gusGetMixRate
+2004 gusGetMode
+2005 gusOpenChans
+2006 gusCloseChans
+2007 gusClearChans
+2008 gusMute
+2009 gusPause
+2010 gusSetMaster
+2011 gusPlaySound
+2012 gusStopSound
+2013 gusSetRate
+2014 gusGetRate
+2015 gusSetVol
+2016 gusSetInst
+2017 gusSetPos
+2018 gusGetPos
+2019 gusSetPanning
+2020 gusGetPanning
+2021 gusMuteChannel
+2022 gusAddInst
+2023 gusRemInst
+2024 gusSetUpdRate
+2025 gusPlay
+2026 gusInitHeap
+2027 gusFreeHeap
+2028 gusMalloc
+2029 gusFree
+2030 gusCoreFree
+2031 gusAllocBlock
+
+2100 pasDetect
+2101 pasInit
+2102 pasClose
+
+2200 wssDetect
+2201 wssInit
+2202 wssClose
+
+2300 sbDetect
+2301 sbInit
+2302 sbClose
+
+2900 nsndDetect
+2901 nsndInit
+2902 nsndClose
+2903 nsndGetMixRate
+2904 nsndGetMode
+2905 nsndOpenChans
+2906 nsndCloseChans
+2907 nsndClearChans
+2908 nsndMute
+2909 nsndPause
+2910 nsndSetMaster
+2911 nsndPlaySound
+2912 nsndStopSound
+2913 nsndSetRate
+2914 nsndGetRate
+2915 nsndSetVol
+2916 nsndSetInst
+2917 nsndSetPos
+2918 nsndGetPos
+2919 nsndSetPanning
+2920 nsndGetPanning
+2921 nsndMuteChannel
+2922 nsndAddInst
+2923 nsndRemInst
+2924 nsndSetUpdRate
+2925 nsndPlay
+

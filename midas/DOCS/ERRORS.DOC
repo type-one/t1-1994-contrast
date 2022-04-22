@@ -1,0 +1,11 @@
+        MIDAS Sound System error handling
+        ---------------------------------
+
+All MIDAS Sound System functions use an unified method for error
+handling. They all return an error code, which will be OK if no error
+occurred. If "DEBUG" has been defined in compilation, errors will also
+be added to MIDAS error list, with an ID number of the function that
+caused the error. This greatly helps debugging, as both the function
+that originally caused the error as well as the functions calling it
+can easily be seen. For a full list of function ID numbers, see
+FUNCTIDS.TXT.

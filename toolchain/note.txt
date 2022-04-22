@@ -1,0 +1,30 @@
+toolchain to build MS-DOS 16 bit executables
+
+to build asm files ml.exe is needed (MASM 6.14)
+
+To get MASM 6.14, download masm32V8.zip from:
+
+http://www.masm32.com/ (2.98 MB)
+
+Unzip and run install.exe. It creates masm32 directory. 
+The MASM files (ml.exe and ml.err) are in the masm32/bin directory.
+
+Copy ml.exe and ml.err in the src folder
+
+-> works on Windows
+
+to build C files and link bcc.exe and tlink.exe are needed (Borland C++ 3.1)
+
+https://archive.org/details/bcpp31
+
+Download BCC31.ZIP and unzip in src/BCC folder
+
+-> works on MS-DOS (i.e. DOSBox)
+
+pklite compressor to squeeze the executable
+
+http://fileformats.archiveteam.org/wiki/PKLITE
+
+-> works on MS-DOS (i.e. DOSBox)
+-> pklite contrast.exe 
+

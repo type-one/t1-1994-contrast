@@ -1,0 +1,80 @@
+        MIDAS Sound System information / FAQ
+        ------------------------------------
+
+MIDAS Sound System is Copyright 1994 Petteri Kangaslampi and Jarno
+Paananen. This file contains some information about MIDAS Sound System
+and answers to some questions we have received lately. It should be
+accurate, but as MIDAS is under constant development some information
+here may already be out of date as you see this file.
+
+MIDAS Sound System is a music and sound system for Borland C, Pascal
+and Assembler programmers. It features up to 32 channels of digitized
+sound, with real-time mixing on sound cards that do not support more
+channels on hardware. MIDAS mixing routines allow freely selectable
+sampling rate, volume and panning on all channels, so that they are
+suitable for music as well as sound effects.
+
+MIDAS currently supports Gravis UltraSound, Creative Labs Sound
+Blaster series (normal SB, SBPro and SB 16), Media Vision Pro Audio
+Spectrum series (normal PAS, PAS+ and PAS 16), and Microsoft Windows
+Sound System. We will add support to any sound card supporting digital
+sound without constant CPU usage (DMA or similar), provided that we can
+get the programming information and a sound card for testing.
+
+MIDAS mixing routines are fast, and use 16-bit mixing on all sound cards
+for maximum quality. Coming in the near future is faster raw 8-bit
+mixing for 8-bit sound (with lower quality), and additional sound
+amplifying for 8-bit higher quality mixing routines for better sound
+quality.
+
+MIDAS Sound System allows several different Module Players for maximum
+compatibility. There are currently two Module Players, for Scream
+Tracker 3 and Pro Tracker modules, which are believed to be the most
+compatible players on PC, naturally excluding Tammilehto's own STMIK
+for Scream Tracker 3 modules. Both Module Players implement a great
+amount of undocumented features and bugs found in the original players,
+so that all modules can be played correctly. Adding new Module Players
+for other format is fast and easy, as the existing ones can be used as
+a basis.
+
+Although MIDAS Sound System is packed with features, it does not take
+very much memory. All unwanted components, like different Module
+Players, can be easily left out, and all the loaders and such use a
+minimal amount of C/Pascal library functions. In addition to this,
+MIDAS fully supports EMS memory for both sample and pattern data. Thus
+playing a 500kb module requires, when using 16-bit stereo, only
+approximately 35kb of memory plus the executable code.
+
+MIDAS also includes a timer system for playing the music in background,
+featuring built-in screen synchronization. This way it is possible to
+change, for example, the screen start address and palette in interrupt,
+effectively using triple-buffering etc, while still playing the music
+in background on all sound cards. This also ensures that no Vertical
+Retraces will be missed even on slow computer.
+
+And most importantly: MIDAS is be available free of charge with all
+source code included! We know that we are probably crazy doing this,
+but we want to give all demo and free game programmers a good music
+system to work with. The MIDAS Sound System license is relatively
+strict in its terms, restricting the usage of the free MIDAS version to
+absolutely free programs only, but exceptions to the license can be
+made for non-commercial usage too as needed. Contact us for more
+information.
+
+MIDAS Sound System may be used free of charge for free programs like
+demos or freeware games, but for commercial software (including
+shareware) separate commercial licensing is required. Prices for
+commercial licenses are from $500USD up per product, depending on how
+much extra work is required from our part. Other licensing methods,
+including royalties or a larger one-time fee for unlimited use are also
+possible, as are possibly lower prices for shareware usage. Contact us
+for details.
+
+MIDAS Sound System is now available. The latest version should always
+be found on Internet in ftp.eng.ufl.edu:
+/pub/msdos/demos/sound/programming/code or /pub/msdos/demos/incoming,
+and on our distribution site BBSes. For the list of distribution sites,
+see the MIDAS Module Player documentation, MIDP.DOC.
+
+For more information about MIDAS Sound System, contact us. See MIDP.DOC
+for contacting information.

@@ -1,0 +1,1 @@
+make -fmidastpu.mak -B

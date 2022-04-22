@@ -1,0 +1,12 @@
+unzip BCPP31.ZIP here
+
+it should have the following structure:
+
+BGI
+BIN
+CLASSLIB
+DOC
+EXAMPLES
+INCLUDE
+LIB
+REDIST

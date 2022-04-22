@@ -1,0 +1,21 @@
+        MIDAS Sound System future versions
+        ----------------------------------
+
+Coming soon (?) to MIDAS:
+
+        - More documentation
+        - More examples
+        - 8-bit low-quality mixing routines for faster speed
+        - Sound amplification in normal-quality 8-bit mixing routines
+          for better sound quality.
+
+
+Coming at least to MIDAS v1.00:
+        - Full documentation
+
+
+Future versions of MIDAS will be released when we have time to finish
+them. Bug fixes and small updates to current MIDAS version will be
+released before that, however, in archives containing just the changed
+files for that revision. The file names will be MDSSxxxy.ZIP, where xxx
+is MIDAS version number and y revision (a-z).

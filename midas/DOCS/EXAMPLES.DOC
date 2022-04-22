@@ -1,0 +1,46 @@
+        MIDAS Sound System example programs
+        -----------------------------------
+
+MIDP.C                  MIDAS Module Player. Not very clear code, but
+                        uses most of the features currently
+                        implemented. To compile, use MIDP.MAK
+
+DBP.C                   MIDAS debug module player. This might not be
+                        fully up to date, as it is used only
+                        for debugging purposes.  If you _REALLY_ want
+                        to use MIDAS without the timer, and
+                        think you know what you are doing, you
+                        could look here for an example on how to
+                        do that. To compile, use DBP.MAK
+
+EXAMPLES\MPLAY.C        Minimal module player using MIDAS. This is
+                        about as small as a full-featured module player
+                        can get. Useful in getting you started. To
+                        compile, use EXAMPLES\C_EXP.MAK
+
+EXAMPLES\SCRDEMO.C      Example on using the Timer screen
+                        synchronization to get smooth panning while
+                        music is still playing. To compile, use
+                        EXAMPLES\C_EXP.MAK
+
+
+EXAMPLES\EFFECTS.C      Example on using simple sound effects with
+                        MIDAS. A full-featured sound effect engine will
+                        be included in the future, but for now on you
+                        can use this as a basis for your own effect
+                        system. To compile, use EXAMPLES\C_EXP.MAK
+
+EXAMPLES\MPLAY.PAS      Minimal module player using MIDAS in Pascal.
+                        To compile, use EXAMPLES\PAS_EXP.MAK
+
+Note! C example programs in directory EXAMPLES need the MIDAS.LIB
+library, and the Pascal examples the MIDAS.TPU unit. To build them use
+MAKELIB.BAT and MAKETPU.BAT, respectively, in the main MIDAS directory.
+
+DBP.PAS                 MIDAS Pascal debug module player. As this
+                        mostly uses the MIDAS interface unit functions,
+                        it can be used as an example. Also contains
+                        code for manual polling. DBP is the only Pascal
+                        program so far using the real VU-meters and
+                        MP.GetInformation(), so it can be helpful with
+                        them as well.

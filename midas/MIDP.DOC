@@ -1,0 +1,276 @@
+        MIDAS Module Player v0.42 documentation
+        ---------------------------------------
+   Copyright 1994 Petteri Kangaslampi and Jarno Paananen
+
+MIDAS MODULE PLAYER IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT
+LIMITED TO, WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE. IN NO EVENT WILL ANY OF THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY DAMAGES CAUSED BY THE USE,
+OR INABILITY TO USE, OF MIDAS MODULE PLAYER.
+
+MIDAS Module Player may freely be distributed as long as no money is
+charged for it, and no attempt is made to restrict further copying,
+distribution and using of MIDAS Module Player. If you have problems
+with this, or do not understand this, contact us.
+
+
+MIDAS Module Player is a program for playing Protracker and Scream
+Tracker 3 modules. It uses MIDAS Sound System, also by us, which is
+now available for the public for free of charge. All source code is
+included. Read MIDAS.TXT for more information about MIDAS Sound System.
+
+
+
+        Foreword
+        --------
+
+As the version number suggests, this is not a final version of MIDP.
+The most important reason for releasing MIDP as a separate executable
+is to get MIDAS Sound System properly tested. In the future MIDP will
+include loads of nice features, like proper archiver support,
+customizable outlook etc, but for now you must live with what you have
+got. The MIDAS Sound System archive includes full source code for MIDP
+too, so if you know C you can tailor MIDP to suit for your needs.
+
+What we now want from you is feedback. Run MIDP on your own computer,
+experiment with it, bang it with strange modules and try to crash it.
+After you know what works and what doesn't, please tell us. The
+preferred method is of course via e-mail, because it is fast and
+convenient for us and probably free for you. We are most interested in
+hearing whether the Sound Devices work on your sound card. So if you
+don't have time to experiment with MIDP for a long time, we would
+appreciate if you could at least run it once or twice with different
+output modes, and tell us whether it worked or not.
+
+When giving us feedback, especially bug reports, please remember to
+include information about your computer system, especially the type of
+your sound card. Please also include, if possible, the MIDAS error list
+given by MIDP on an error situation. It gives us invaluable information
+about the error and, even more importantly, where that error occurred.
+This way we have better chances of finding the bugs.
+
+Unlike most other module players, MIDP is not commercial, shareware, or
+even cardware. But, if you like MIDP, nothing naturally stops you from
+sending us something, money, a postcard or whatever. We would hope to
+get at least a "Hey, MIDP works with my xxx sound card" e-mail message.
+
+
+
+        Sound Devices
+        -------------
+
+MIDAS uses all sound cards through modules called Sound Devices.
+Currently there are Sound Devices for the following sound cards:
+
+        1. Gravis UltraSound
+                * Should work with all GUS versions. Some problems have
+                  been reported on GUS v3.x, but as we only have a v2
+                  GUS we have not been able to test them ourselves.
+                  Most v3 specific bugs should be fixed for this
+                  version, however.
+
+        2. Media Vision Pro Audio Spectrum family
+                * This includes PAS, PAS+ and PAS 16
+                * Note that the PAS Sound Device always attempts to use
+                  16-bit output unless otherwise told, so with PAS or
+                  PAS+ sound cards, you must use the command-line option
+                  -o8. In addition to this, with normal PAS you should
+                  also set the mixing rate to 22kHz or less, using
+                  -m22000. This will be fixed in the near future.
+
+        3. Microsoft Windows Sound System
+                * Should also work with other WSS compatible cards,
+                  such as Compaq Business Audio, and is tested to work
+                  with Audiotrix Pro.
+                * Note that there is no autodetection for WSS, so you
+                  must force the correct settings using the command
+                  line options (ie. -s3 -p530 -i9 -d3)
+
+        4. Creative Labs Sound Blaster series
+                * Fully supports SB 1.0, 1.5, 2.0, SB Pro and SB 16.
+                * Attempts to always use DMA channel 1, so with SB 16
+                  you have to force the correct "High-DMA" channel (ie.
+                  -d5)
+
+        5. No Sound
+                * Plays nothing, is always used when nothing else is
+                  detected.
+                * Just to allow sound synchronization even with no
+                  sound card.
+
+Note that both the GUS and SB Sound Device use direct hardware
+detection routines, and might therefore cause problems on some
+computers. In that case, simply force the settings from the command
+line. This will be fixed in the future, as all detection will be done
+using the environment variables.
+
+
+
+        MIDP Usage:
+        -----------
+
+The command line syntax for MIDP is:
+
+        MIDP [options] <filenames> [options]
+
+        At least one module file name must be included. MIDP also
+        supports multiple modules and wildcards.
+
+Options:
+        -sx     Force Sound Device x (1 = GUS, 2 = PAS, 3 = WSS, 4 = SB,
+                5 = No Sound)
+        -pxxx   Force I/O port xxx (hex) for Sound Device
+        -ix     Force IRQ x for Sound Device
+        -dx     Force DMA channel x for Sound Device
+        -mxxxx  Set mixing rate to xxxx Hz
+        -oxxx   Force output mode (8 = 8-bit, 1 = 16-bit, s = stereo,
+                m = mono)
+        -e      Disable EMS usage
+        -t      Disable ProTracker BPM tempos
+        -u      Enable Surround sound (affects only GUS)
+        -v      Disable real VU-meters
+        -------
+        -S      Jump immediately to DOS shell
+        -c      Disable timer screen synchronization
+        -C      Enable timer screen synchronization also in DOS shell
+        -Lx     Number of song loops before next song
+        -O      Scramble module playing order
+
+Also '/' is recognized as option delimiter.
+Note that the options are CASE SENSITIVE.
+
+
+
+        MIDAS environment variable
+        --------------------------
+
+MIDAS Sound System specific options (above the line in the command
+line option list above) can also be set to environment variable MIDAS,
+so that they do not have to be entered every time. The syntax is
+exactly the same as with the command line options. Also other programs
+that use MIDAS Sound System will probably recognize the environment
+variable.
+
+Example:
+        SET MIDAS=-s3 -p530 -i9 -d3 -om -m32000
+
+
+
+        MIDP keys
+        ---------
+
+When playing a module, MIDP can be controlled using the following keys:
+(most of these are same as in DMP, so learning them should not be very
+difficult...)
+
+        Alt-X           Quick exit
+        Left/Right      Next / Previous position
+        Up/Down         Select active channel
+        Esc             Exit with fade out
+        +/-             Increase / Decrease master volume
+        D               Jump to DOS shell
+        1-9, 0          Toggle channels on/off
+        ,/.             Adjust active channel panning left / right
+        M               Set active channel panning to middle
+        L               Set active channel panning to left
+        R               Set active channel panning to right
+        U               Set active channel panning to surround
+        T               Toggle active channel on/off
+        P               Pause module. Press P to continue
+        Space           Mute playing. Press Space again to un-mute
+        N               Next module
+
+Plus some internal debugging keys (someone would try these anyway):
+        F               Lists all free blocks in heap
+        H               Lists all memory blocks in heap
+
+
+
+        Archive support
+        ---------------
+
+MIDP also includes a primitive archive support, built as we ourselves
+needed it. When playing a file with extension .ZIP, .MDZ or .S3Z, MIDP
+first decompresses the file using PKUNZIP to the directory set by
+environment variable "TEMP", or to C:\ if none is set. Then the first
+file from that directory with same name as the archive (but with any
+extension) will be played and deleted immediately after playing starts.
+When multiple archives are being played, the decompression of the next
+start immediately after starting to play the previous one, to give
+almost uninterrupted background music.
+
+Archive support will be enhanced in the future, after we implement some
+kind of configuration file, to include any archivers and extensions.
+But for now on this must do.
+
+
+
+        The future
+        ----------
+
+Future versions of MIDP will include:
+
+        1. Configuration file, with ability to change archivers,
+           extensions, colors, palette and probably redefine some
+           characters from the display.
+
+        2. Less bugs (depending on your bug reports).
+
+        3. No debug code (if 2 ever comes true)
+
+
+
+        Contact us
+        ----------
+
+For bug reports, comments, questions etc., contact us:
+
+e-mail:
+        pekanga@freeport.uwasa.fi (Petteri Kangaslampi)
+        Jarno_Paananen@sonata.fipnet.fi (Jarno Paananen)
+        gurus2@freeport.uwasa.fi (Jarno Paananen, use if the fipnet
+                address fails)
+
+FidoNet: (SLOW!)
+	Petteri Kangaslampi, 2:221/319 (Maximus Filecenter)
+
+voice:
+        +358-31-646764 (Petteri Kangaslampi)
+        +358-31-3422147 (Jarno Paananen)
+        Please restrict your calls to 10.00 - 21.30, Finnish
+        time.
+
+normal mail:
+        Petteri Kangaslampi
+        Simeoninkuja 4
+        FIN-36240 Kangasala 4
+        Finland
+
+        Jarno Paananen
+        Puskalantie 6
+        FIN-37120 Nokia
+        Finland
+
+
+
+        Distribution sites
+        ------------------
+
+The latest MIDAS Sound System and MIDAS Module Player should be always
+available on these fine BBSes:
+
+WarmBoot BBS            +55-194-265112
+        Sysop: Carlos Henrique Cantu (WarmBooter)
+
+Moir Brandts Honk       #1: +31-(0)70-3461215 USR/DS         (14K4)
+                        #2: +31-(0)70-3457929 ZyXEL U-1496E+ (19K2)
+                        #3: +31-(0)70-3452981 LineLink 144e  (14K4)
+        Sysop: Hugo Voerman
+
+The Pantheon            703-378-3553 (changing soon?)
+        Sysops: Farmicus [CiA], Lord Soth [iCE], and Shaggy [iCE Senior
+        Staff]
+
+The Solarium            +358-31-3170851
+        Sysop: Jussi Holtta (Peak / Anarchy)

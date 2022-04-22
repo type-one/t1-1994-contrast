@@ -1,0 +1,33 @@
+        MIDAS Sound System known bugs and missing features
+        --------------------------------------------------
+
+- Pro Audio Spectrum series Sound Device (PAS.ASM) does not check for
+  PAS version when setting output mode, but attempts to use 16-bit
+  output on all cards unless otherwise told. This will be fixed in the
+  future.
+
+- Windows Sound System Sound Device does not contain a detection
+  routine, and so when using MIDAS.* interface, a port, IRQ or DMA
+  value must always be forced even if the defaults were correct. Some
+  kind of detection routine will be added in the future, probably using
+  an environment variable.
+
+- Gravis Ultra Sound and Sound Blaster series Sound Devices use
+  hardware detection routines, which may cause problems on some
+  configurations and not be able to detect all possible values. Sound
+  Blaster detection routine (sbDetect()) always attempts to use DMA
+  channel 1. There detection routines will be changed in the future to
+  use only the "ULTRASND" and "BLASTER" environment settings.
+
+- Not all Sound Device member functions are currently implemented. This
+  includes at least SD.Mute() and SD.Pause(). All Sound Device
+  functions will be fully implemented at least before version 1.00.
+
+- Amiga Loop Emulation is not implemented in DSM, which is used by all
+  Sound Devices except GUS. ALE will be added to DSM in the future.
+
+- Protracker Module Player refuses to load modules with inaccurate
+  period values or notes outsize octaves 1-3. This is not actually a
+  bug, but rather a Protracker compatibility issue. Support for octaves
+  0 and 4 will probably not be added to Protracker Module Player, as it
+  would seriously affect compatibility with Protracker.
